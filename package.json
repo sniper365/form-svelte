@@ -14,9 +14,20 @@
     "build": "rollup -c",
     "dev": "rollup -c -w"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+		"svelte",
+		"svelte-ui",
+		"svelte-components",
+		"w3css",
+		"ui"
+	],
+  "author": "ramki <kvraamkeydev@gmail.com>",
+  "files": [
+		"src",
+		"index.mjs",
+		"index.js"
+	],
+  "license": "MIT",
   "devDependencies": {
     "rollup": "^2.21.0",
     "rollup-plugin-node-resolve": "^5.2.0",
