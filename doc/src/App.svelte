@@ -2,15 +2,23 @@
 <section class="content w3-text-black">
 	<Asise />
 	<div class="w3-container w3-padding main">
-		<Button />
+		<h2>{$url}</h2>
+		<svelte:component this={$url ? Components[$url] : Components['Introduction']} />
 	</div>
 </section>
 
 <script>
+	import { onMount } from 'svelte';
+	import { url } from './stores';
 	import Header from './components/Header.svelte';
 	import Asise from './components/Aside.svelte';
-	import Button from './pages/button';
-	import { pkgName } from '@kvraamkey/svelte-ui';
+	import Components from './pages';
+	import { getUrl, toCamelCase } from './utils';
+	// import { pkgName } from '@kvraamkey/svelte-ui';
+
+	onMount(async () => {
+		url.update((u) => (getUrl() ? toCamelCase(getUrl()) : 'Introduction'));
+	});
 </script>
 
 <style>

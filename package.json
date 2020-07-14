@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/kvraamkey/svelte-ui.git"
   },
-  "homepage": "http://kvraamkey.github.io/svelte-ui",
+  "homepage": "https://kvraamkey.github.io/svelte-ui",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",

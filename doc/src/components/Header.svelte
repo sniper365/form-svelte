@@ -56,6 +56,6 @@
 	}
 	.logo {
 		position: relative;
-		top: 3px;
+		top: 1px;
 	}
 </style>
