@@ -13,11 +13,11 @@
 	import Header from './components/Header.svelte';
 	import Asise from './components/Aside.svelte';
 	import Components from './pages';
-	import { getUrl, toCamelCase } from './utils';
+	import { getUrlParam, toCamelCase } from './utils';
 	// import { pkgName } from '@kvraamkey/svelte-ui';
 
 	onMount(async () => {
-		url.update((u) => (getUrl() ? toCamelCase(getUrl()) : 'Introduction'));
+		url.update((u) => (getUrlParam('c') ? toCamelCase(getUrlParam('c')) : 'Introduction'));
 	});
 </script>
 
