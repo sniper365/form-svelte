@@ -1,0 +1,33 @@
+:root {
+	--color: #333;
+	--alternate: #fff;
+	--bg-color: #fbfbfb;
+	--primary: #1976d2;
+	--accent: #f50057;
+	--divider: rgba(0, 0, 0, 0.1);
+	--bg-popover: #fff;
+	--border: #dfdfdf;
+	--label: rgba(0, 0, 0, 0.3755);
+	--bg-input-filled: rgba(0, 0, 0, 0.0555);
+
+	--bg-app-bar: #888;
+	--bg-panel: #eee;
+	--font-family: Roboto, Helvetica, sans-serif;
+	--heading-font-family: var(--font-family);
+	--button-font-family: var(--font-family);
+	--code-font-family: Verdana,sans-serif;
+
+	--focus-color: rgba(25, 118, 210, 0.5); /* primary with alpha */
+}
+
+html, body{
+    overflow: hidden;
+    background: #fbfbfb;
+	color: #3f403f;
+	    font-size: 16px;
+    font-weight: 400;
+}
+.center{
+    display: flex !important;
+    align-items: center;
+}
