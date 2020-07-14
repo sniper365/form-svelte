@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+const {markdown} = require('svelte-preprocess-markdown');
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -22,7 +23,9 @@ export default {
 			// a separate file - better for performance
 			css: css => {
 				css.write('public/build/bundle.css');
-			}
+			},
+			extensions: ['.svelte','.md'],
+			preprocess: markdown()
 		}),
 
 		// If you have external dependencies installed from

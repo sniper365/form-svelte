@@ -1,6 +1,6 @@
 {
   "name": "@kvraamkey/svelte-ui",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Simple Svelte 3 UI components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -9,26 +9,28 @@
     "type": "git",
     "url": "https://github.com/kvraamkey/svelte-ui.git"
   },
-  "homepage": "",
+  "homepage": "http://kvraamkey.github.io/svelte-ui",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "deploy": "gh-pages -d doc/public"
   },
   "keywords": [
-		"svelte",
-		"svelte-ui",
-		"svelte-components",
-		"w3css",
-		"ui"
-	],
+    "svelte",
+    "svelte-ui",
+    "svelte-components",
+    "w3css",
+    "ui"
+  ],
   "author": "ramki <kvraamkeydev@gmail.com>",
   "files": [
-		"src",
-		"index.mjs",
-		"index.js"
-	],
+    "src",
+    "index.mjs",
+    "index.js"
+  ],
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "rollup": "^2.21.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^5.2.3",
