@@ -1,5 +1,9 @@
+<DemoPanel {code}>
+	<Button name="counter: {counter}" on:click={increment} />
+</DemoPanel>
+
 <Description>
-	<Submarkup />
+	{@html doc}
 </Description>
 
 <Properties data={properties} />
@@ -9,10 +13,16 @@
 </Properties>
 
 <script>
-	import { Description, Properties } from './../../components/demo';
+	import { Button } from '@kvraamkey/svelte-ui';
+	import { DemoPanel, Description, Properties } from './../../components/demo';
 
 	import code from './code.md';
-	import Submarkup from './doc.md';
+	import doc from './doc.md';
 	import properties from './props';
 	import custom from './custom';
+	let counter = 0;
+
+	const increment = (e) => {
+		counter += 1;
+	};
 </script>

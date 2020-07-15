@@ -1,11 +1,36 @@
 import svelte from 'rollup-plugin-svelte';
+import { createFilter } from 'rollup-pluginutils';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
-const {markdown} = require('svelte-preprocess-markdown');
+import marked from 'marked';
+import hljs from 'highlight.js';
 
 const production = !process.env.ROLLUP_WATCH;
+
+const ext = /\.md$/;
+
+function md(options = {}) {
+	const filter = createFilter(options.include || ['**/*.md'], options.exclude);
+	if (options.marked) {
+		marked.setOptions(options.marked);
+	}
+	return {
+		name: 'md',
+
+		transform(md, id) {
+			if (!ext.test(id)) return null;
+			if (!filter(id)) return null;
+
+			const data = marked(md);
+			return {
+				code: `export default ${JSON.stringify(data.toString())};`,
+				map: { mappings: '' },
+			};
+		},
+	};
+}
 
 export default {
 	input: 'src/main.js',
@@ -24,8 +49,15 @@ export default {
 			css: css => {
 				css.write('public/build/bundle.css');
 			},
-			extensions: ['.svelte','.md'],
-			preprocess: markdown()
+			extensions: ['.svelte','.svg']
+		}),
+
+		md({
+			marked: {
+				highlight: function(code) {
+					return hljs.highlightAuto(code, ['bash', 'html', 'css']).value;
+				},
+			},
 		}),
 
 		// If you have external dependencies installed from

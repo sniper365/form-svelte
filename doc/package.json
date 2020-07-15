@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "@kvraamkey/svelte-ui": "link:..",
+    "highlight.js": "^10.1.1",
+    "marked": "^1.1.1",
     "sirv-cli": "^0.4.4"
   }
 }
