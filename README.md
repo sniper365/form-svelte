@@ -2,7 +2,7 @@
 
 Set of the UI components for [Svelte](https://svelte.dev), inspired by W3Schools [W3Css](https://www.w3schools.com/w3css/)
 
-[View the demo](https://svelte-mui.now.sh)
+[View the demo](https://kvraamkey.github.io/svelte-ui/)
 
 ## Installation
 
