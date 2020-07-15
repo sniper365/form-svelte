@@ -17,7 +17,7 @@
     "svelte-preprocess-markdown": "^2.7.2"
   },
   "dependencies": {
-    "@kvraamkey/svelte-ui": "link:..",
+    "@kvraamkey/svelte-ui": "^0.1.5",
     "highlight.js": "^10.1.1",
     "marked": "^1.1.1",
     "sirv-cli": "^0.4.4"

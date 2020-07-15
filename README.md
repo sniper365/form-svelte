@@ -21,9 +21,3 @@ npx degit sveltejs/template svelte-app
 cd svelte-app
 npm install
 ```
-
-Add components
-
-```bash
-npm install --save-dev svelte-mui
-```

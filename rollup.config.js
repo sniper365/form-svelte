@@ -1,6 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from 'rollup-plugin-node-resolve';
 import { terser } from "rollup-plugin-terser";
+import css from 'rollup-plugin-css-porter';
 
 const pkg = require('./package.json');
 
@@ -13,7 +14,15 @@ export default {
 	input: 'src/index.js',
 	output: [
 		{ file: pkg.module, format: 'es' },
-		{ file: pkg.main, format: 'umd', name:"@kvraamkey/svelte-ui" },
+		{ file: pkg.main, format: 'umd', name},
 	],
-	plugins: [svelte(), resolve(),terser()],
+	plugins: [
+		svelte(),
+		resolve(),
+		terser(),
+		css({
+			raw: false,
+			minified: 'dist/globalStyle.min.css',
+		})
+	]
 };
