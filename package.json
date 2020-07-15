@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "svelte": "dist/index.js",
+  "author": "Ramki A <kvraamkeydev@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git@github.com:kvraamkey/svelte-ui.git"
@@ -13,6 +14,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
+    "predeploy": "cd doc && yarn install && yarn run build",
     "deploy": "gh-pages -d doc/public"
   },
   "keywords": [
@@ -22,7 +24,6 @@
     "w3css",
     "ui"
   ],
-  "author": "ramki <kvraamkeydev@gmail.com>",
   "files": [
     "index.mjs",
     "index.js",
