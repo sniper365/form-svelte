@@ -1,2 +1,3 @@
-const pkgName = '@kvraamkey/svelte-ui';
-export { pkgName };
+import Button from './components/Button.svelte';
+
+export { Button };
