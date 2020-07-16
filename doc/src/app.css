@@ -419,6 +419,7 @@ a {
     height: 18px;
     position: relative;
     top: 6px;
+    cursor: pointer;
 }
 .w3-sidebar {
     height: 100%;
