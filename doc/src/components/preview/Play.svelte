@@ -1,13 +1,12 @@
-<p>Play with some properties</p>
-<div class="properties">
-	<slot />
-</div>
+<section class="props-panel w3-border-left w3-padding-small flex column">
+    <h5>Play with Props</h5>
+    <div class="properties">
+        <slot />
+    </div>
+</section>
 
 <style>
-	.properties {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		align-items: flex-start;
-	}
+    .props-panel {
+        min-width: 300px;
+    }
 </style>
