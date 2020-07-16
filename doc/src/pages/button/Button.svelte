@@ -1,6 +1,14 @@
-<DemoPanel {code}>
-	<Button name="counter: {counter}" on:click={increment} />
-</DemoPanel>
+<PreviewPanel {code}>
+
+	<div>
+		<Button name="Default" />
+		<Button name="Primary" btnType="primary" />
+		<Button name="Outline" btnType="outline" />
+		<Button name="Ghost" btnType="ghost" />
+		<Button name="Link" btnType="link" />
+	</div>
+
+</PreviewPanel>
 
 <Description>
 	{@html doc}
@@ -14,7 +22,7 @@
 
 <script>
 	import { Button } from '@kvraamkey/svelte-ui';
-	import { DemoPanel, Description, Properties } from './../../components/demo';
+	import { PreviewPanel, Description, Properties } from './../../components/preview';
 
 	import code from './code.md';
 	import doc from './doc.md';

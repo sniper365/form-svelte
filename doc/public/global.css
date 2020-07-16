@@ -1,22 +1,5 @@
 :root {
-	--color: #333;
-	--alternate: #fff;
-	--bg-color: #fbfbfb;
-	--primary: #1976d2;
-	--accent: #f50057;
-	--divider: rgba(0, 0, 0, 0.1);
-	--bg-popover: #fff;
-	--border: #dfdfdf;
-	--label: rgba(0, 0, 0, 0.3755);
-	--bg-input-filled: rgba(0, 0, 0, 0.0555);
-
-	--bg-app-bar: #888;
-	--bg-panel: #eee;
 	--font-family: 'Fira Mono', monospace;
-	--heading-font-family: var(--font-family);
-	--button-font-family: var(--font-family);
-	--code-font-family: var(--font-family);
-	--focus-color: rgba(25, 118, 210, 0.5); /* primary with alpha */
 }
 
 
@@ -24,113 +7,8 @@ html, body{
     overflow: hidden;
     background: #fbfbfb;
 	color: #3f403f;
-	    font-size: 16px;
+	font-size: 16px;
 	font-weight: 400;
 	font-family: var(--font-family);
 }
 
-code, kbd, pre, samp{
-	font-family: var(--font-family) !important;
-}
-.center{
-    display: flex !important;
-    align-items: center;
-}
-
-/* code highlight theme */
-.language-bash * {
-	color: currentColor !important;
-}
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #333;
-}
-.hljs-keyword,
-.hljs-operator {
-	color: #f27076;
-}
-.hljs-pattern-match {
-	color: #f27076;
-}
-.hljs-pattern-match .hljs-constructor {
-	color: #61aeee;
-}
-.hljs-function {
-	color: #3e3eb5;
-}
-.hljs-function .hljs-params {
-	color: #a6e22e;
-}
-.hljs-function .hljs-params .hljs-typing {
-	color: #fd971f;
-}
-.hljs-module-access .hljs-module {
-	color: #7e57c2;
-}
-.hljs-constructor {
-	color: #e2b93d;
-}
-.hljs-constructor .hljs-string {
-	color: #c2e988;
-}
-.hljs-comment,
-.hljs-quote {
-	color: green;
-	font-style: italic;
-}
-.hljs-doctag,
-.hljs-formula {
-	color: #c678dd;
-}
-.hljs-tag {
-	color: brown;
-}
-.hljs-section,
-.hljs-name,
-.hljs-selector-tag,
-.hljs-deletion,
-.hljs-subst {
-	color: brown;
-}
-.hljs-literal {
-	color: #56b6c2;
-}
-.hljs-string,
-.hljs-regexp,
-.hljs-addition,
-.hljs-attribute,
-.hljs-meta-string {
-	color: mediumblue;
-}
-.hljs-built_in,
-.hljs-class .hljs-title {
-	color: #e6c07b;
-}
-.hljs-attr,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-type,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-number {
-	color: red;
-}
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link,
-.hljs-meta,
-.hljs-selector-id,
-.hljs-title {
-	color: mediumblue;
-}
-.hljs-emphasis {
-	font-style: italic;
-}
-.hljs-strong {
-	font-weight: bold;
-}
-.hljs-link {
-	text-decoration: underline;
-}

@@ -6,6 +6,7 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import marked from 'marked';
 import hljs from 'highlight.js';
+import postcss from 'rollup-plugin-postcss'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -51,6 +52,11 @@ export default {
 			},
 			extensions: ['.svelte','.svg']
 		}),
+
+		postcss({
+			minimize: true,
+			//   modules: true,
+		 }),
 
 		md({
 			marked: {

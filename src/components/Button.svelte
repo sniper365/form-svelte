@@ -1,4 +1,4 @@
-<button on:click={onclick} use:events class="w3-button">{name}</button>
+<button role="button" class="w3-button w3-white w3-border" on:click={onclick} use:events>{name}</button>
 
 <script>
 	import { createEventDispatcher } from 'svelte';
@@ -13,3 +13,7 @@
 		dispatch('change');
 	}
 </script>
+
+<style>
+
+</style>

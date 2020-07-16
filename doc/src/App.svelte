@@ -1,5 +1,5 @@
 <Header />
-<section class="content w3-text-black">
+<section class="content flex h-screen w3-text-black">
 	<Asise />
 	<div class="w3-container w3-padding main">
 		<h2>{$url}</h2>
@@ -8,34 +8,33 @@
 </section>
 
 <script>
+	import './app.css';
 	import { onMount } from 'svelte';
 	import { url } from './stores';
 	import Header from './components/Header.svelte';
 	import Asise from './components/Aside.svelte';
 	import Components from './pages';
 	import { getUrlParam, toCamelCase } from './utils';
-	// import { pkgName } from '@kvraamkey/svelte-ui';
-
 	onMount(async () => {
 		url.update((u) => (getUrlParam('c') ? toCamelCase(getUrlParam('c')) : 'Introduction'));
 	});
 </script>
 
 <style>
-	.content {
-		display: flex;
-		padding: 0;
-		font-size: 100%;
-		position: relative;
-		overflow: hidden;
-		width: 100%;
-		height: 100vh;
+	:root {
+		--font-family: 'Fira Mono', monospace;
 	}
-	.main {
-		flex: 1 1 auto;
-		display: flex;
-		flex-direction: column;
-		overflow-y: auto;
-		padding-bottom: 60px !important;
+
+	:global(html, body) {
+		overflow: hidden;
+		background: #fbfbfb;
+		color: #3f403f;
+		font-size: 16px;
+		font-weight: 400;
+		font-family: var(--font-family);
+	}
+
+	.w3-container {
+		overflow: auto;
 	}
 </style>

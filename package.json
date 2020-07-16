@@ -1,6 +1,6 @@
 {
   "name": "@kvraamkey/svelte-ui",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "Simple Svelte 3 UI components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

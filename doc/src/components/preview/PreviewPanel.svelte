@@ -1,5 +1,5 @@
-<div class="demo-panel w3-light-gray">
-	<div class="toolbar w3-bar">
+<div class="preview-panel w3-light-gray">
+	<div class="toolbar w3-bar w3-border-bottom">
 		<span class="title w3-bar-item">Example</span>
 		<span on:click={() => (codeVisible = !codeVisible)} class="title w3-bar-item w3-right">{'{}'}</span>
 	</div>
@@ -10,7 +10,7 @@
 		</div>
 	{/if}
 
-	<div class="demo">
+	<div class="preview w3-panel w3-padding-24">
 		<slot />
 		<slot name="action" />
 	</div>
@@ -25,7 +25,7 @@
 </script>
 
 <style>
-	.demo {
+	.preview {
 		display: flex;
 		justify-content: center;
 		align-items: center;
