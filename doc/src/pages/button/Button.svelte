@@ -1,5 +1,4 @@
-<section class="w3-padding">
-    <h3>Button</h3>
+<PreviewPanelWrapper title="Button">
     <PreviewPanel {code}>
         <div>
             <Button name="Default" border {...props} />
@@ -19,7 +18,7 @@
     <Properties data={custom}>
         <h4 slot="name" class="w3-margin-top">CSS custom properties</h4>
     </Properties>
-</section>
+</PreviewPanelWrapper>
 
 <PropsPanel>
     <section class="flex align-items-center w3-margin-bottom">
@@ -42,7 +41,13 @@
 
 <script>
     import { Button } from '@kvraamkey/svelte-ui';
-    import { PreviewPanel, Description, Properties, Play as PropsPanel } from './../../components/preview';
+    import {
+        PreviewPanelWrapper,
+        PreviewPanel,
+        Description,
+        Properties,
+        Play as PropsPanel,
+    } from './../../components/preview';
 
     import code from './code.md';
     import doc from './doc.md';

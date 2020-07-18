@@ -1,6 +1,6 @@
 <section>
-	<h3>Description</h3>
-	<slot />
+    <h4>Description</h4>
+    <slot />
 </section>
 
 <style>
