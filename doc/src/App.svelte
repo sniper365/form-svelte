@@ -1,10 +1,12 @@
-<Header />
-<section class="content flex h-screen w3-text-black">
-    <Asise />
-    <div class="flex scrollable">
-        <svelte:component this={$url ? Components[$url] : Components['Introduction']} />
+<div class="f fc hf">
+    <Header />
+    <div class="f fa oh ac">
+        <Asise />
+        <div class="f">
+            <svelte:component this={$url ? Components[$url] : Components['Introduction']} />
+        </div>
     </div>
-</section>
+</div>
 
 <script>
     import './app.css';
@@ -18,17 +20,3 @@
         url.update(u => (getUrlParam('c') ? toCamelCase(getUrlParam('c')) : 'Introduction'));
     });
 </script>
-
-<style>
-    :root {
-        --font-family: 'Fira Mono', monospace;
-    }
-    :global(html, body) {
-        overflow: hidden;
-        background: #fbfbfb;
-        color: #3f403f;
-        font-size: 16px;
-        font-weight: 400;
-        font-family: var(--font-family);
-    }
-</style>
