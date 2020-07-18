@@ -1,6 +1,7 @@
 <div class="am f fc h-full oy">
     <button on:click={navigation} data-url="introduction" class="aml f">Introduction</button>
     <button on:click={navigation} data-url="button" class="aml f">Button</button>
+    <button on:click={navigation} data-url="LERT" class="aml f">ALERT</button>
 </div>
 
 <script>

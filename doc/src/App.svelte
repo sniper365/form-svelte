@@ -3,6 +3,7 @@
     <div class="f fa oh ac">
         <Asise />
         <div class="f">
+            {$url}
             <svelte:component this={$url ? Components[$url] : Components['Introduction']} />
         </div>
     </div>

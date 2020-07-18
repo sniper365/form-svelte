@@ -22,18 +22,19 @@
                 </td>
                 <td>
                     {#if item.def && (item.def[0] === '#' || item.def.indexOf('rgb') === 0)}
-                        <span
-                            style={`display:inline-block;width:11px;height:11px;border:1px solid #bbb;background-color:${item.def}`}
-                        />
+                        <span style={`display:inline-block;width:10px;height:10px;background-color:${item.def}`} />
                         {item.def}
                     {:else}
-                        {@html item.def}
+                        <strong>
+                            {@html item.def}
+                        </strong>
                     {/if}
                 </td>
             </tr>
         {/each}
     </table>
 </div>
+<br />
 
 <script>
     export let data = [];
@@ -42,15 +43,15 @@
 <style>
     table {
         width: 100%;
-        font-family: var(--code-font-family);
+        font-family: Consolas, monospace;
         letter-spacing: 0.01em;
         border-collapse: collapse;
         border-spacing: 0;
-        font-size: 13px;
+        font-size: 13.5px;
         line-height: 18px;
     }
     tr:first-child {
-        background: var(--bg-color);
+        background: var(--color-default);
         font-weight: 500;
     }
     tr:first-child th:nth-child(2) {
@@ -58,20 +59,18 @@
     }
     th,
     td {
-        padding: 8px;
-        border: 1px solid var(--color-lightGrey);
+        padding: 5px 10px;
+        border: 1px solid var(--default);
         text-align: left;
         vertical-align: middle;
     }
-    td :global(code) {
-        color: var(--color-error);
-    }
+    td :global(code),
     code {
-        color: var(--color-error);
+        color: var(--color-secondary);
     }
     small {
         display: block;
-        color: var(--color-grey);
+        color: #747681;
         text-transform: capitalize;
     }
 </style>

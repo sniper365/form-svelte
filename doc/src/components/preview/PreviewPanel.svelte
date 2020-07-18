@@ -21,7 +21,7 @@
 <script>
     import { slide } from 'svelte/transition';
     export let code;
-    let codeVisible = true;
+    let codeVisible = false;
 </script>
 
 <style>

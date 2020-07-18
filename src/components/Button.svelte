@@ -1,18 +1,22 @@
 <button
     role="button"
-    class="w3-btn w3-border easeall"
-    class:w3-white={!primary}
-    class:w3-blue={primary}
-    class:w3-border-blue={primary}
-    class:w3-round={round}
-    class:w3-round-small={roundSmall}
-    class:w3-round-large={round_large}
-    class:w3-round-xlarge={round_xlarge}
-    class:w3-round-xxlarge={round_xxlarge}
-    on:click={onclick}
+    class={`${className} faic btn if tea`}
+    class:btnr={rounded}
+    class:pc={primary}
+    class:sc={secondary}
+    class:disabled
+    class:link
+    class:icon
+    class:fjcc={icon}
+    {style}
+    class:btno={outlined}
+    {disabled}
     use:events
 >
-    {name}
+    {#if icon}
+        <slot name="icon" />
+    {/if}
+    {#if name}{name}{/if}
 </button>
 
 <script>
@@ -20,13 +24,17 @@
     import { current_component } from 'svelte/internal';
     import { getEventsAction } from './../utils';
 
-    export let name = 'Label';
+    export let name;
     export let primary = false;
-    export let round = false;
-    export let roundSmall = false;
-    export let round_large = false;
-    export let round_xlarge = false;
-    export let round_xxlarge = false;
+    export let secondary = false;
+    export let outlined = false;
+    export let rounded = false;
+    export let disabled = false;
+    export let link = false;
+    export let icon = true;
+    export let style;
+    export let className = '';
+
     const dispatch = createEventDispatcher();
     const events = getEventsAction(current_component);
     function onclick(e) {
@@ -35,6 +43,5 @@
 </script>
 
 <style>
-    button {
-    }
+
 </style>

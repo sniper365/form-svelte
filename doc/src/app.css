@@ -10,11 +10,11 @@
 
 ::-webkit-scrollbar:hover {
     display: block;
-    background: var(--color-lightGrey);
+    background: var(--default);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--color-lightGrey);
+    background-color: var(--default);
 }
 
 ::-webkit-scrollbar:horizontal {
@@ -29,8 +29,8 @@ html {
     height: 100%;
 }
 .ah {
-    background: var(--color-light);
-    border-bottom: 1px solid var(--color-lightGrey);
+    background: var(--light);
+    border-bottom: 1px solid var(--default);
     padding: 5px 10px;
 }
 .al {
@@ -38,14 +38,14 @@ html {
     font-size: 20px;
 }
 .ac {
-    background: var(--color-light);
+    background: var(--light);
 }
 .ppw {
     padding: 0px 16px;
 }
 
 .pp {
-    border: 1px solid var(--color-lightGrey);
+    border: 1px solid var(--default);
     margin-bottom: 10px;
 }
 
@@ -71,11 +71,11 @@ html {
 .aml,
 .pph,
 .hljs {
-    border-bottom: 1px solid var(--color-lightGrey);
+    border-bottom: 1px solid var(--default);
 }
 .am,
 .ppw {
-    border-right: 1px solid var(--color-lightGrey);
+    border-right: 1px solid var(--default);
 }
 
 table {
@@ -87,7 +87,7 @@ table {
 }
 
 table.striped tr:nth-of-type(2n) {
-    background-color: var(--bg-secondary-color);
+    background-color: var(--default);
 }
 
 td,
@@ -97,11 +97,11 @@ th {
 }
 
 thead {
-    border-bottom: 2px solid var(--color-lightGrey);
+    border-bottom: 2px solid var(--default);
 }
 
 tfoot {
-    border-top: 2px solid var(--color-lightGrey);
+    border-top: 2px solid var(--default);
 }
 
 /* code preview */

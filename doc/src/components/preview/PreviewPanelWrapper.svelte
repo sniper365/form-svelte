@@ -1,4 +1,4 @@
-<section class="ppw f fc oy">
+<section class="ppw f fc oy ao">
     <h3>{title}</h3>
     <slot />
 </section>
