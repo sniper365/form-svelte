@@ -30,7 +30,7 @@ html {
 }
 .ah {
     background: var(--light);
-    border-bottom: 1px solid var(--default);
+    border-bottom: 1px solid 1px solid rgba(189, 189, 189, 0.4);
     padding: 5px 10px;
 }
 .al {
@@ -45,7 +45,7 @@ html {
 }
 
 .pp {
-    border: 1px solid var(--default);
+    border: 1px solid rgba(189, 189, 189, 0.4);
     margin-bottom: 10px;
 }
 
@@ -71,11 +71,11 @@ html {
 .aml,
 .pph,
 .hljs {
-    border-bottom: 1px solid var(--default);
+    border-bottom: 1px solid rgba(189, 189, 189, 0.4);
 }
 .am,
 .ppw {
-    border-right: 1px solid var(--default);
+    border-right: 1px solid rgba(189, 189, 189, 0.4);
 }
 
 table {
@@ -87,7 +87,7 @@ table {
 }
 
 table.striped tr:nth-of-type(2n) {
-    background-color: var(--default);
+    background-color: rgba(189, 189, 189, 0.4);
 }
 
 td,
@@ -97,11 +97,11 @@ th {
 }
 
 thead {
-    border-bottom: 2px solid var(--default);
+    border-bottom: 2px solid rgba(189, 189, 189, 0.4);
 }
 
 tfoot {
-    border-top: 2px solid var(--default);
+    border-top: 2px solid rgba(189, 189, 189, 0.4);
 }
 
 /* code preview */

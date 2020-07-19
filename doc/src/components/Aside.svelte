@@ -1,12 +1,14 @@
 <div class="am f fc h-full oy">
-    <button on:click={navigation} data-url="introduction" class="aml f">Introduction</button>
-    <button on:click={navigation} data-url="button" class="aml f">Button</button>
-    <button on:click={navigation} data-url="LERT" class="aml f">ALERT</button>
+    {#each Object.keys(components) as component}
+        <button on:click={navigation} data-url={component} class="aml f">{component}</button>
+    {/each}
 </div>
 
 <script>
     import { url } from './../stores.js';
     import { toCamelCase } from './../utils';
+    import components from './../pages';
+
     function navigation(e) {
         let comp = e.target.dataset.url;
         window.history.replaceState(null, null, `?c=${comp}`);

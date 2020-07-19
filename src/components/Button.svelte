@@ -2,8 +2,8 @@
     role="button"
     class={`${className} faic btn if tea`}
     class:btnr={rounded}
-    class:pc={primary}
-    class:sc={secondary}
+    class:pc={color === 'primary'}
+    class:sc={color === 'secondary'}
     class:disabled
     class:link
     class:icon
@@ -13,9 +13,7 @@
     {disabled}
     use:events
 >
-    {#if icon}
-        <slot name="icon" />
-    {/if}
+    <slot name="icon" />
     {#if name}{name}{/if}
 </button>
 
@@ -24,14 +22,13 @@
     import { current_component } from 'svelte/internal';
     import { getEventsAction } from './../utils';
 
-    export let name;
-    export let primary = false;
-    export let secondary = false;
+    export let name = '';
+    export let color;
     export let outlined = false;
     export let rounded = false;
     export let disabled = false;
     export let link = false;
-    export let icon = true;
+    export let icon = false;
     export let style;
     export let className = '';
 

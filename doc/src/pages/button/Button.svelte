@@ -1,9 +1,9 @@
 <PreviewPanelWrapper title="Button">
     <PreviewPanel {code}>
         <Button on:click={increment} name="Default" {...props} />
-        <Button on:click={increment} name="Primary" {...props} primary />
-        <Button on:click={increment} name="Secondary" {...props} secondary />
-        <Button on:click={increment} name="Disabled" {...props} secondary disabled />
+        <Button on:click={increment} name="Primary" {...props} color="primary" />
+        <Button on:click={increment} name="Secondary" {...props} color="secondary" />
+        <Button on:click={increment} name="Disabled" {...props} color="secondary" disabled />
         <Button on:click={increment} name="Link" {...props} link primary />
 
         <!-- <Button className="custom" on:click={increment} name="Custom CSS" {...props} /> -->
@@ -17,7 +17,7 @@
                 />
             </svg>
         </Button>
-        <span class="f faic fjcc wf">Clicked counter: [ {counter} ]</span>
+        <!-- <span class= "f faic fjcc wf">Clicked counter: [ {counter} ]</span> -->
     </PreviewPanel>
 
     <Description>
