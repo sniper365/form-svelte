@@ -1,3 +1,3 @@
-import Avatar from './Avatar.svelte';
+import Sample from './Sample.svelte';
 
-export default Avatar;
+export default Sample;
