@@ -44,13 +44,7 @@
 
 <script>
     import { Button } from '@kvraamkey/svelte-ui';
-    import {
-        PreviewPanelWrapper,
-        PreviewPanel,
-        Description,
-        Properties,
-        Play as PropsPanel,
-    } from './../../components/preview';
+    import { PreviewPanelWrapper, PreviewPanel, Description, Properties, PropsPanel } from './../../components/preview';
 
     import code from './code.md';
     import doc from './doc.md';

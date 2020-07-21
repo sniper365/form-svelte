@@ -1,6 +1,5 @@
 ```javascript
 <Avatar alt="Ramki A" src={imgUrl} />
-
 <Avatar>
 	<svg slot="icon" class="icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
 		<path
@@ -10,12 +9,7 @@
 		/>
 	</svg>
 </Avatar>
-
 <Avatar alt="KV" />
-
-<Avatar alt="Ramki A" src={imgUrl} size="small" />
-<Avatar alt="Ramki A" src={imgUrl} />
-<Avatar alt="Ramki A" src={imgUrl} size="large" />
 
 <script>
     import { Avatar } from '@kvraamkey/svelte-ui';

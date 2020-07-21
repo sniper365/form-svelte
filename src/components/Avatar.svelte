@@ -1,6 +1,6 @@
 <div
     role="button"
-    class="f faic fjcc ao oh avatar"
+    class="f faic fjcc ao oh avatar tea"
     class:pc={color === 'primary'}
     class:sc={color === 'secondary'}
     class:small={size === 'small'}
@@ -8,7 +8,7 @@
     {style}
 >
     {#if src && isImgLoaded}
-        <img {alt} {src} class="ao" />
+        <img {alt} {src} class="ao" width="75%" />
     {/if}
     {#if src && alt && !isImgLoaded}{toShortName(alt)}{/if}
     {#if !src && alt}{alt}{/if}
@@ -23,7 +23,7 @@
     export let style;
     export let color;
     export let size;
-    let isImgLoaded = false;
+    let isImgLoaded = true;
 
     function toShortName(name) {
         if (name) {

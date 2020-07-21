@@ -1,4 +1,4 @@
-<section class="props-panel w3-border-left w3-padding-small flex column">
+<section class="props-panel f fc">
     <h5>Play with Props</h5>
     <div class="properties">
         <slot />
@@ -8,5 +8,6 @@
 <style>
     .props-panel {
         min-width: 300px;
+        padding: 10px 12px;
     }
 </style>
