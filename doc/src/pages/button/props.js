@@ -6,16 +6,10 @@ export default [
         def: "''",
     },
     {
-        name: 'primary',
-        desc: "Color of the button, additionally, 'primary' and 'secondary' values are possible",
+        name: 'color',
+        desc: "Color of the Button background, additionally, 'default,'primary' and 'secondary' values are possible",
         type: 'enum',
-        def: 'null',
-    },
-    {
-        name: 'secondary',
-        desc: '',
-        type: 'boolean',
-        def: 'false',
+        def: 'default',
     },
     {
         name: 'outlined',
