@@ -7,7 +7,9 @@
 <script>
     import { url } from './../stores.js';
     import { toCamelCase } from './../utils';
-    import components from './../pages';
+    import * as components from './../pages';
+
+    console.log(components);
 
     function navigation(e) {
         let comp = e.target.dataset.url;

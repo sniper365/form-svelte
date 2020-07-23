@@ -14,7 +14,7 @@
     import { url } from './stores';
     import Header from './components/Header.svelte';
     import Asise from './components/Aside.svelte';
-    import Components from './pages';
+    import * as Components from './pages';
     import { getUrlParam, toCamelCase } from './utils';
     onMount(async () => {
         url.update(u => (getUrlParam('c') ? toCamelCase(getUrlParam('c')) : 'Introduction'));
