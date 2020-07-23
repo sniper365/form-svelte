@@ -37,4 +37,11 @@
     import doc from './doc.md';
     import properties from './props';
     import custom from './custom';
+
+    let isChecked = false;
+
+    function handleCheckbox() {
+        isChecked = !isChecked;
+        console.log(isChecked);
+    }
 </script>
