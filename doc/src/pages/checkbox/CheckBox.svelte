@@ -1,10 +1,13 @@
 <PreviewPanelWrapper title="Avatar">
     <PreviewPanel {code}>
-        <div class="f fc" style="margin-top:20px">
-            <CheckBox name="Default" />
-            <CheckBox name="checked" checked />
-            <CheckBox name="disabled" disabled />
-            <CheckBox name="Checked & Disabled" disabled checked />
+        <div class="f fc">
+            <CheckBox id={'test'} class="res" {...props}>
+                <span name="child">
+                    I agree that
+                    <a target="_blank" href="https://svelte.dev" title="Open in new window">Svelte</a>
+                    is awesome
+                </span>
+            </CheckBox>
         </div>
     </PreviewPanel>
 
@@ -27,7 +30,8 @@
 </PreviewPanelWrapper>
 
 <PropsPanel>
-    <!-- props sample code -->
+    <CheckBox bind:checked={props.checked} name="check" />
+    <CheckBox bind:checked={props.disabled} name="disabled" />
 </PropsPanel>
 
 <script>
@@ -38,10 +42,12 @@
     import properties from './props';
     import custom from './custom';
 
-    let isChecked = false;
+    let props = {
+        checked: false,
+        disabled: false,
+    };
 
     function handleCheckbox() {
-        isChecked = !isChecked;
-        console.log(isChecked);
+        checked = tru;
     }
 </script>

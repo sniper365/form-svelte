@@ -17,7 +17,7 @@
                 />
             </svg>
         </Button>
-        <!-- <span class= "f faic fjcc wf">Clicked counter: [ {counter} ]</span> -->
+        <span class="f faic fjcc wf">Clicked counter: [ {counter} ]</span>
     </PreviewPanel>
 
     <Description>
