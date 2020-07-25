@@ -32,18 +32,12 @@
 </PreviewPanelWrapper>
 
 <PropsPanel>
-    <section class="flex align-items-center w3-margin-bottom">
-        <input class="w3-check" id="rounded" name="rounded" type="checkbox" bind:checked={props.rounded} />
-        <label for="rounded">rounded</label>
-    </section>
-    <section class="flex align-items-center w3-margin-bottom">
-        <input class="w3-check" id="outlined" name="round" type="checkbox" bind:checked={props.outlined} />
-        <label for="outlined">outlined</label>
-    </section>
+    <CheckBox name="rounded" bind:checked={props.rounded} />
+    <CheckBox name="outlined" bind:checked={props.outlined} />
 </PropsPanel>
 
 <script>
-    import { Button } from '@kvraamkey/svelte-ui';
+    import { Button, CheckBox } from '@kvraamkey/svelte-ui';
     import { PreviewPanelWrapper, PreviewPanel, Description, Properties, PropsPanel } from './../../components/preview';
 
     import code from './code.md';

@@ -38,25 +38,19 @@
     <legend>Color</legend>
 
     {#each colors as color}
-        <label>
-            <input type="radio" data-prop="color" bind:group={props.color} value={color} />
-            {color}
-        </label>
+        <Radio bind:group={props.color} value={color} name={color} />
     {/each}
 
     <legend>Size</legend>
 
     {#each sizes as size}
-        <label>
-            <input type="radio" data-prop="size" bind:group={props.size} value={size} />
-            {size}
-        </label>
+        <Radio bind:group={props.size} value={size} name={size} />
     {/each}
 
 </PropsPanel>
 
 <script>
-    import { Avatar } from '@kvraamkey/svelte-ui';
+    import { Avatar, Radio } from '@kvraamkey/svelte-ui';
     import { PreviewPanelWrapper, PreviewPanel, Description, Properties, PropsPanel } from './../../components/preview';
     import code from './code.md';
     import doc from './doc.md';
@@ -68,13 +62,14 @@
         color: 'default',
         size: 'medium',
     };
+
     const colors = ['default', 'primary', 'secondary'];
     const sizes = ['small', 'medium', 'large'];
 </script>
 
 <style>
-    label {
-        margin-right: 6px;
+    legend {
+        margin-bottom: 6px;
         text-transform: capitalize;
     }
 </style>
