@@ -13,7 +13,7 @@ export default [
     },
     {
         name: 'color',
-        desc: "Color of the check box element, additionally, 'primary' and 'secondary' values are possible",
+        desc: "Color of the radio element, additionally, 'primary' and 'secondary' values are possible",
         type: 'string',
         def: 'default',
     },

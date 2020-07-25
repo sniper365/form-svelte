@@ -1,11 +1,13 @@
 <PreviewPanelWrapper title="Avatar">
     <PreviewPanel {code}>
         <div class="f fc">
-            <label class="cbx f grop">
-                <input type="checkbox" class="cbh" value="on" />
-                <span class="cblb rb f fasc tea" />
-                <span class="cbl">check</span>
-            </label>
+            <Radio id={'test'} class="res" {...props}>
+                <span name="child">
+                    I agree that
+                    <a target="_blank" href="https://svelte.dev" title="Open in new window">Svelte</a>
+                    is awesome
+                </span>
+            </Radio>
         </div>
     </PreviewPanel>
 
@@ -27,10 +29,13 @@
 
 </PreviewPanelWrapper>
 
-<PropsPanel />
+<PropsPanel>
+    <Radio bind:checked={props.checked} name="check" />
+    <Radio bind:checked={props.disabled} name="disabled" />
+</PropsPanel>
 
 <script>
-    import {} from '@kvraamkey/svelte-ui';
+    import { Radio } from '@kvraamkey/svelte-ui';
     import { PreviewPanelWrapper, PreviewPanel, Description, Properties, PropsPanel } from './../../components/preview';
     import code from './code.md';
     import doc from './doc.md';
@@ -41,21 +46,8 @@
         checked: false,
         disabled: false,
     };
-</script>
 
-<style>
-    .rb {
-        border-radius: 50%;
+    function handleCheckbox() {
+        checked = tru;
     }
-    .cbh:checked + .rb {
-        background: transparent;
-    }
-    .cbh:checked + .rb:after {
-        top: 2px;
-        left: 2px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border: 5px solid var(--default);
-    }
-</style>
+</script>
