@@ -1,5 +1,5 @@
-<label class={`cbx f grop ${className}`} class:disabled {style}>
-    <input type="radio" bind:value class="cbh" bind:group {disabled} use:events {...attrs} />
+<label class={`cbx f grop ${className}`} class:disabled {style} {title}>
+    <input type="radio" class="cbh" bind:group {value} {disabled} use:events />
     <span class="cblb rb f fasc tea" />
     <span class="cbl">
         <slot>{name}</slot>
@@ -11,24 +11,12 @@
     import { getEventsAction } from './../utils';
 
     const events = getEventsAction(current_component);
-
-    export { group, className as class, style, disabled, name };
-
-    let group = false;
-    let className = '';
-    let style = null;
-    // let color = 'primary'; // primary, accent, currentColor, inherit
-    let disabled = false;
-    let name = null;
-    let value = 'on';
-    let attrs = {};
-
-    $: {
-        const { group, style, name, value, ...other } = $$props;
-
-        !other.disabled && delete other.disabled;
-        delete other.class;
-
-        attrs = other;
-    }
+    export let group = true;
+    export let className = '';
+    export let style = null;
+    export let color = 'primary'; // primary, accent, currentColor, inherit
+    export let disabled = false;
+    export let name = null;
+    export let value;
+    export let title = name;
 </script>

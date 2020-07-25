@@ -1,13 +1,17 @@
 <PreviewPanelWrapper title="Avatar">
     <PreviewPanel {code}>
         <div class="f fc">
-            <Radio id={'test'} class="res" {...props}>
-                <span name="child">
-                    I agree that
-                    <a target="_blank" href="https://svelte.dev" title="Open in new window">Svelte</a>
-                    is awesome
-                </span>
-            </Radio>
+
+            {#each Object.keys(colors) as key}
+                <Radio {...props} bind:group color={colors[key]} value={key}>
+                    <span>{key}</span>
+                </Radio>
+            {/each}
+            <!-- <p class="result">
+                Value: [
+                <code>{group}</code>
+                ]
+            </p> -->
         </div>
     </PreviewPanel>
 
@@ -30,24 +34,25 @@
 </PreviewPanelWrapper>
 
 <PropsPanel>
-    <Radio bind:checked={props.checked} name="check" />
-    <Radio bind:checked={props.disabled} name="disabled" />
+    <CheckBox bind:checked={props.disabled} name="disabled" />
 </PropsPanel>
 
 <script>
-    import { Radio } from '@kvraamkey/svelte-ui';
+    import { Radio, CheckBox } from '@kvraamkey/svelte-ui';
     import { PreviewPanelWrapper, PreviewPanel, Description, Properties, PropsPanel } from './../../components/preview';
     import code from './code.md';
     import doc from './doc.md';
     import properties from './props';
     import custom from './custom';
 
+    let colors = {
+        Default: '#f50057',
+        Primary: '#43a047',
+        Secondary: '#1976d2',
+    };
+    let group = 'Default';
+
     let props = {
-        checked: false,
         disabled: false,
     };
-
-    function handleCheckbox() {
-        checked = tru;
-    }
 </script>
