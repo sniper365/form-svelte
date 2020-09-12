@@ -1,3 +1,28 @@
+<script>
+    import { Avatar, Radio } from '@kvraamkey/svelte-ui';
+    import { PreviewPanelWrapper, PreviewPanel, Description, Properties, PropsPanel } from './../../components/preview';
+    import code from './code.md';
+    import doc from './doc.md';
+    import properties from './props';
+    import custom from './custom';
+
+    const imgUrl = 'https://github.githubassets.com/images/icons/emoji/octocat.png';
+    let props = {
+        color: 'default',
+        size: 'medium',
+    };
+
+    const colors = ['default', 'primary', 'secondary'];
+    const sizes = ['small', 'medium', 'large'];
+</script>
+
+<style>
+    legend {
+        margin-bottom: 6px;
+        text-transform: capitalize;
+    }
+</style>
+
 <PreviewPanelWrapper title="Avatar">
     <PreviewPanel {code}>
         <div class="f wf fjcc" style="margin-top:20px">
@@ -30,11 +55,9 @@
             <h4 slot="name" class="w3-margin-top">CSS custom properties</h4>
         </Properties>
     {/if}
-
 </PreviewPanelWrapper>
 
 <PropsPanel>
-
     <legend>Color</legend>
 
     {#each colors as color}
@@ -46,30 +69,4 @@
     {#each sizes as size}
         <Radio bind:group={props.size} value={size} name={size} />
     {/each}
-
 </PropsPanel>
-
-<script>
-    import { Avatar, Radio } from '@kvraamkey/svelte-ui';
-    import { PreviewPanelWrapper, PreviewPanel, Description, Properties, PropsPanel } from './../../components/preview';
-    import code from './code.md';
-    import doc from './doc.md';
-    import properties from './props';
-    import custom from './custom';
-
-    const imgUrl = 'https://github.githubassets.com/images/icons/emoji/octocat.png';
-    let props = {
-        color: 'default',
-        size: 'medium',
-    };
-
-    const colors = ['default', 'primary', 'secondary'];
-    const sizes = ['small', 'medium', 'large'];
-</script>
-
-<style>
-    legend {
-        margin-bottom: 6px;
-        text-transform: capitalize;
-    }
-</style>

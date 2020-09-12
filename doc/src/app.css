@@ -78,32 +78,6 @@ html {
     border-right: 1px solid rgba(189, 189, 189, 0.4);
 }
 
-table {
-    width: 100%;
-    border: none;
-    border-collapse: collapse;
-    border-spacing: 0;
-    text-align: left;
-}
-
-table.striped tr:nth-of-type(2n) {
-    background-color: rgba(189, 189, 189, 0.4);
-}
-
-td,
-th {
-    vertical-align: middle;
-    padding: 1.2rem 0.4rem;
-}
-
-thead {
-    border-bottom: 2px solid rgba(189, 189, 189, 0.4);
-}
-
-tfoot {
-    border-top: 2px solid rgba(189, 189, 189, 0.4);
-}
-
 /* code preview */
 
 .hljs {

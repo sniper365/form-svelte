@@ -1,41 +1,3 @@
-<slot name="name">
-    <h4>Properties</h4>
-</slot>
-
-<div class="properties">
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Default</th>
-        </tr>
-        {#each data as item}
-            <tr>
-                <td>
-                    <code>{item.name}</code>
-                    {#if item.type}
-                        <small>{item.type}</small>
-                    {/if}
-                </td>
-                <td>
-                    {@html item.desc}
-                </td>
-                <td>
-                    {#if item.def && (item.def[0] === '#' || item.def.indexOf('rgb') === 0)}
-                        <span style={`display:inline-block;width:10px;height:10px;background-color:${item.def}`} />
-                        {item.def}
-                    {:else}
-                        <strong>
-                            {@html item.def}
-                        </strong>
-                    {/if}
-                </td>
-            </tr>
-        {/each}
-    </table>
-</div>
-<br />
-
 <script>
     export let data = [];
 </script>
@@ -74,3 +36,39 @@
         text-transform: capitalize;
     }
 </style>
+
+<slot name="name">
+    <h4>Properties</h4>
+</slot>
+
+<div class="properties">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Default</th>
+        </tr>
+        {#each data as item}
+            <tr>
+                <td>
+                    <code>{item.name}</code>
+                    {#if item.type}<small>{item.type}</small>{/if}
+                </td>
+                <td>
+                    {@html item.desc}
+                </td>
+                <td>
+                    {#if item.def && (item.def[0] === '#' || item.def.indexOf('rgb') === 0)}
+                        <span style={`display:inline-block;width:10px;height:10px;background-color:${item.def}`} />
+                        {item.def}
+                    {:else}
+                        <strong>
+                            {@html item.def}
+                        </strong>
+                    {/if}
+                </td>
+            </tr>
+        {/each}
+    </table>
+</div>
+<br />

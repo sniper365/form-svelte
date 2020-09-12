@@ -19,7 +19,6 @@
     </span>
 
     <span class="f faic">
-
         <a href="https://github.com/kvraamkey/svelte-ui" target="_blank" class="f faic">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,5 +41,4 @@
             </svg>
         </a>
     </span>
-
 </div>

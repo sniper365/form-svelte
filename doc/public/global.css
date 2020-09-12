@@ -29,20 +29,19 @@ html{box-sizing:border-box;line-height:1.15;-ms-text-size-adjust:100%;-webkit-te
 .avatar{width:40px;height:40px;user-select:none;border-radius:50%;color:var(--light);background:var(--color-default);letter-spacing:1px;line-height:1.5}.avatar.small{width:24px;height:24px;font-size:10px}.avatar.large{width:56px;height:56px;font-size:20px}.avatar+.avatar{margin-left:8px}
 /* checkbox */
 .cbx{margin:0 0 16px 0; cursor: pointer;}.cbh{position:absolute;top:-9999px;left:-9999px;appearance:none;opacity:0}.cblb{position:relative;height:18px;width:18px;border:2px solid var(--default);border-radius:2px;}.cbl{position:relative;margin-left:6px;user-select:none;color:var(--font-color)}.cbx.disabled{cursor:not-allowed;opacity: 0.5;}.cbh:checked+.cblb{background-color:var(--default)}.cbh:checked+.cblb:after{content:'';display:block;position:absolute;top:0;left:5px;width:5px;height:11px;border:solid var(--light);border-width:0 2px 2px 0;transform:rotate(45deg)}
-.rb {
-        border-radius: 50%;
-    }
-    .cbh:checked + .rb {
-        background: transparent;
-    }
-    .cbh:checked + .rb:after {
-        top: 2px;
-        left: 2px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border: 5px solid var(--default);
-    }
+.rb { border-radius: 50%; }
+.cbh:checked + .rb { background: transparent; }
+.cbh:checked + .rb:after { top: 2px; left: 2px; width: 10px; height: 10px; border-radius: 50%; border: 5px solid var(--default);}
+
+/* table */
+
+
+/* sc-component-id: sc-bdVaJa */
+.table{border-spacing:0;border:1px solid black;width: 100%;} 
+.table tr:last-child td{border-bottom:0;} 
+.table th,.table td{margin:0;padding:0.5rem;border-bottom:1px solid black;border-right:1px solid black;} 
+.table th:last-child, .table td:last-child{border-right:0;}
+
 
 /* utils colors */
 svg.icon{fill:currentColor;width:1.2rem;height:1.2rem;display:inline-block;font-size:1.5rem;transition:fill .2s cubic-bezier(.4,0,.2,1) 0s;flex-shrink:0;user-select:none}.pc{color:var(--light);background-color:var(--color-primary);border-color:var(--color-primary)}.pc.btno{color:var(--color-primary)}.pc:hover{background-color:var(--color-primary-hover)!important;color:var(--light)}.sc{color:var(--light);background-color:var(--color-secondary);border-color:var(--color-secondary)}.sc.btno{color:var(--color-secondary)}.sc:hover{color:var(--light);background-color:var(--color-secondary-hover)!important}

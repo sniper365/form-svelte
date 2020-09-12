@@ -1,3 +1,17 @@
+<script>
+    import { slide } from 'svelte/transition';
+    export let code;
+    let codeVisible = false;
+</script>
+
+<style>
+    .preview {
+        margin: 1rem 0;
+        padding: 8px;
+        min-height: 7.25rem;
+    }
+</style>
+
 <div class="pp f fc">
     <div class="pph f faic">
         <span class="f1">Example</span>
@@ -17,17 +31,3 @@
 
     <slot name="result" />
 </div>
-
-<script>
-    import { slide } from 'svelte/transition';
-    export let code;
-    let codeVisible = false;
-</script>
-
-<style>
-    .preview {
-        margin: 1rem 0;
-        padding: 8px;
-        min-height: 7.25rem;
-    }
-</style>

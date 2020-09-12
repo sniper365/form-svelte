@@ -1,3 +1,32 @@
+<script>
+    import { Button, CheckBox } from '@kvraamkey/svelte-ui';
+    import { PreviewPanelWrapper, PreviewPanel, Description, Properties, PropsPanel } from './../../components/preview';
+
+    import code from './code.md';
+    import doc from './doc.md';
+    import properties from './props';
+    import custom from './custom';
+    let counter = 0;
+
+    let props = {
+        rounded: false,
+        outlined: false,
+    };
+
+    const increment = (e) => {
+        counter += 1;
+    };
+</script>
+
+<style>
+    :global(.custom) {
+        --btn-text-color: #fff;
+        --btn-text-hcolor: var(--btn-text-color);
+        --btn-bg-color: #9c27b0;
+        --btn-bg-hcolor: #7b1fa2;
+    }
+</style>
+
 <PreviewPanelWrapper title="Button">
     <PreviewPanel {code}>
         <Button on:click={increment} name="Default" {...props} />
@@ -35,32 +64,3 @@
     <CheckBox name="rounded" bind:checked={props.rounded} />
     <CheckBox name="outlined" bind:checked={props.outlined} />
 </PropsPanel>
-
-<script>
-    import { Button, CheckBox } from '@kvraamkey/svelte-ui';
-    import { PreviewPanelWrapper, PreviewPanel, Description, Properties, PropsPanel } from './../../components/preview';
-
-    import code from './code.md';
-    import doc from './doc.md';
-    import properties from './props';
-    import custom from './custom';
-    let counter = 0;
-
-    let props = {
-        rounded: false,
-        outlined: false,
-    };
-
-    const increment = e => {
-        counter += 1;
-    };
-</script>
-
-<style>
-    :global(.custom) {
-        --btn-text-color: #fff;
-        --btn-text-hcolor: var(--btn-text-color);
-        --btn-bg-color: #9c27b0;
-        --btn-bg-hcolor: #7b1fa2;
-    }
-</style>
