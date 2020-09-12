@@ -1,0 +1,15 @@
+.*
+doc/assets
+doc/public
+temp
+/index.js
+/index.mjs
+*.json
+*.md
+*.gz
+*.tgz
+*.svg
+rollup.config.js
+LICENSE
+
+public/build
