@@ -1,21 +1,3 @@
-<div
-    role="button"
-    class="f faic fjcc ao oh avatar tea"
-    class:pc={color === 'primary'}
-    class:sc={color === 'secondary'}
-    class:small={size === 'small'}
-    class:large={size === 'large'}
-    {style}
->
-    {#if src && isImgLoaded}
-        <img {alt} {src} class="ao" width="75%" />
-    {/if}
-    {#if src && alt && !isImgLoaded}{toShortName(alt)}{/if}
-    {#if !src && alt}{alt}{/if}
-
-    <slot name="icon" />
-</div>
-
 <script>
     import { onMount } from 'svelte';
     export let src;
@@ -48,3 +30,19 @@
         }
     });
 </script>
+
+<div
+    role="button"
+    class="f faic fjcc ao oh avatar tea"
+    class:pc={color === 'primary'}
+    class:sc={color === 'secondary'}
+    class:small={size === 'small'}
+    class:large={size === 'large'}
+    {style}
+>
+    {#if src && isImgLoaded}<img {alt} {src} class="ao" width="75%" />{/if}
+    {#if src && alt && !isImgLoaded}{toShortName(alt)}{/if}
+    {#if !src && alt}{alt}{/if}
+
+    <slot name="icon" />
+</div>

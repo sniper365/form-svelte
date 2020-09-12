@@ -11,3 +11,5 @@ temp
 *.svg
 rollup.config.js
 LICENSE
+
+dist

@@ -1,11 +1,3 @@
-<label class={`cbx f grop ${className}`} class:disabled {style}>
-    <input type="checkbox" bind:value class="cbh" bind:checked {disabled} use:events {...attrs} />
-    <span class="cblb f fasc tea" />
-    <span class="cbl">
-        <slot>{name}</slot>
-    </span>
-</label>
-
 <script>
     import { current_component } from 'svelte/internal';
     import { getEventsAction } from './../utils';
@@ -32,3 +24,11 @@
         attrs = other;
     }
 </script>
+
+<label class={`cbx f grop ${className}`} class:disabled {style}>
+    <input type="checkbox" bind:value class="cbh" bind:checked {disabled} use:events {...attrs} />
+    <span class="cblb f fasc tea" />
+    <span class="cbl">
+        <slot>{name}</slot>
+    </span>
+</label>
