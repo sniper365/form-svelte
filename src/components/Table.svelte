@@ -23,7 +23,9 @@
             <slot name="row" {row} {n}>
                 <tr>
                     {#each columns as col}
-                        <td>{row[col.accessor]}</td>
+                        <td>
+                            {@html col.formatter ? col.formatter(row) : row[col.accessor]}
+                        </td>
                     {/each}
                 </tr>
             </slot>

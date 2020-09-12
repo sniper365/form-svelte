@@ -2077,6 +2077,9 @@
         {
             Header: 'Status',
             accessor: 'status',
+            formatter: (v) => {
+                return `<i style="color:#f00;">${v.status}</i>`;
+            },
         },
         {
             Header: 'Profile Progress',
