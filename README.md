@@ -7,7 +7,7 @@ Set of the UI components for [Svelte](https://svelte.dev), inspired by W3Schools
 _Note that you will need to have [Node.js](https://nodejs.org) installed_
 
 ```bash
-npm install --save-dev @kvraamkey/svelte-ui
+npm install
 ```
 
 ## Quick start with new project
